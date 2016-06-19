@@ -58,7 +58,7 @@ namespace Chart.Mvc.Extensions
             stringBuilder.AppendFormat("var ctx = document.getElementById(\"{0}\").getContext(\"2d\");", canvasId);
             stringBuilder.AppendFormat("var data = JSON.parse('{0}');", jsonData);
             stringBuilder.AppendFormat("var options = JSON.parse('{0}');", jsonOptions);
-            stringBuilder.AppendFormat("var {0}_chart = new Chart(ctx).{1}(data, options)", canvasId, chartType);
+            stringBuilder.AppendFormat("var {0}_chart = new Chart.{1}(ctx, {{data: data, options: options}});", canvasId, chartType);
             tag.InnerHtml = stringBuilder.ToString();
             return new MvcHtmlString(tag.ToString());
         }

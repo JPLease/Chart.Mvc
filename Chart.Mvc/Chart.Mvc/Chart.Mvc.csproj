@@ -143,6 +143,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\AnimationOptions.cs" />
+    <Compile Include="Elements\ArcOptions.cs" />
     <Compile Include="ComplexChart\Bar\BarChart.cs" />
     <Compile Include="ComplexChart\Bar\BarChartOptions.cs" />
     <Compile Include="ComplexChart\ComplexChartBase.cs" />
@@ -154,10 +156,17 @@
     <Compile Include="ComplexChart\Line\LineChartOptions.cs" />
     <Compile Include="ComplexChart\Radar\RadarChart.cs" />
     <Compile Include="ComplexChart\Radar\RadarChartOptions.cs" />
+    <Compile Include="Elements\ElementsOptions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="GlobalChartOptions.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Hover\HoverOptions.cs" />
+    <Compile Include="Legend\LegendLabelOptions.cs" />
+    <Compile Include="Legend\LegendOptions.cs" />
+    <Compile Include="Elements\LineOptions.cs" />
+    <Compile Include="Elements\PointOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Elements\RectangleOptions.cs" />
     <Compile Include="SimpleChart\Doughnut\DoughnutChart.cs" />
     <Compile Include="SimpleChart\Doughnut\DoughnutChartOptions.cs" />
     <Compile Include="SimpleChart\Pie\PieChart.cs" />
@@ -168,6 +177,9 @@
     <Compile Include="SimpleChart\SimpleChartOptions.cs" />
     <Compile Include="SimpleChart\SimpleChartType.cs" />
     <Compile Include="SimpleChart\SimpleData.cs" />
+    <Compile Include="Title\TitleOptions.cs" />
+    <Compile Include="Tooltip\TooltipCallbackOptions.cs" />
+    <Compile Include="Tooltip\TooltipOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

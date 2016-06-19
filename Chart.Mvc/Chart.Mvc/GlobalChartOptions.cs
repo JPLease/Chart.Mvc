@@ -1,376 +1,92 @@
-﻿namespace Chart.Mvc
+﻿using Chart.Mvc.Animation;
+using Chart.Mvc.Elements;
+using Chart.Mvc.Hover;
+using Chart.Mvc.Legend;
+using Chart.Mvc.Title;
+using Chart.Mvc.Tooltip;
+
+namespace Chart.Mvc
 {
     /// <summary>
     /// The global chart options.
     /// </summary>
     public abstract class GlobalChartOptions
     {
-        /// <summary>
-        /// Gets or sets whether to animate the chart.
-        /// </summary>
-        public bool? Animation
-        {
-            get; 
-            set;
-        }
+        private readonly TitleOptions title = new TitleOptions();
+        private readonly LegendOptions legend = new LegendOptions();
+        private readonly TooltipOptions tooltip = new TooltipOptions();
+        private readonly HoverOptions hover = new HoverOptions();
+        private readonly AnimationOptions animation = new AnimationOptions();
+        private readonly ElementsOptions elements = new ElementsOptions();
+
+        #region Global Font Settings
 
         /// <summary>
-        /// Gets or sets the number of animation steps.
+        /// Default font color for all text.
         /// </summary>
-        public double? AnimationSteps
-        {
-            get;
-            set;
-        }
+        public string DefaultFontColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the animation easing effect.
+        /// Default font family for all text.
         /// </summary>
-        public string AnimationEasing
-        {
-            get; set;
-        }
+        public string DefaultFontFamily { get; set; }
 
         /// <summary>
-        /// Gets or sets if we should show the scale at all.
+        /// Default font size (in px) for text. Does not apply to radialLinear scale point labels.
         /// </summary>
-        public bool? ShowScale
-        {
-            get;
-            set;
-        }
+        public double? DefaultFontSize { get; set; }
 
         /// <summary>
-        /// Gets or sets if we want to override with a hard coded scale.
+        /// Default font style. Does not apply to tooltip title or footer. Does not apply to chart title.
         /// </summary>
-        public bool? ScaleOverride
-        {
-            get; 
-            set;
-        }
+        public string DefaultFontStyle { get; set; }
+
+        #endregion
+
+        #region Common Chart Configuration
 
         /// <summary>
-        /// Gets or sets the number of steps in a hard coded scale.
+        /// Resizes when the canvas container does.
         /// </summary>
-        public double? ScaleSteps
-        {
-            get; 
-            set;
-        }
+        public bool? Responsive { get; set; }
 
         /// <summary>
-        /// Gets or sets the value jump in the hard coded scale.
+        /// Duration in milliseconds it takes to animate to new size after a resize event.
         /// </summary>
-        public double? ScaleStepWidth
-        {
-            get; 
-            set;
-        }
+        public double? ResponsiveAnimationDuration { get; set; }
 
         /// <summary>
-        /// Gets or sets the scale starting value.
+        /// Maintain the original canvas aspect ratio (width / height) when resizing.
         /// </summary>
-        public double? ScaleStartValue
-        {
-            get;
-            set;
-        }
+        public bool? MaintainAspectRatio { get; set; }
 
         /// <summary>
-        /// Gets or sets the color of the scale line.
+        /// Events that the chart should listen to for tooltips and hovering.
         /// </summary>
-        public string ScaleLineColor
-        {
-            get;
-            set;
-        }
+        public string[] Events { get; set; }
 
         /// <summary>
-        /// Gets or sets the pixel width of the scale line.
+        /// Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed an array of active elements.
         /// </summary>
-        public double? ScaleLineWidth
-        {
-            get;
-            set;
-        }
+        public string OnClick { get; set; }
 
         /// <summary>
-        /// Gets or sets whether to show labels on the scale.
+        /// Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
         /// </summary>
-        public bool? ScaleShowLabels
-        {
-            get;
-            set;
-        }
+        public string LegendCallback { get; set; }
 
-        /////// <summary>
-        /////// Gets or sets the scale label. Interpolated JS string - can access value.
-        /////// </summary>
-        ////public string ScaleLabel
-        ////{
-        ////    get; 
-        ////    set;
-        ////}
+        #endregion
+        
+        public TitleOptions Title { get { return title; } }
+        
+        public LegendOptions Legend { get { return legend; } }
+        
+        public TooltipOptions Tooltip { get { return tooltip; } }
 
-        /// <summary>
-        /// Gets or sets whether the scale should stick to integers, not floats even if drawing space is there.
-        /// </summary>
-        public bool? ScaleIntegersOnly
-        {
-            get; 
-            set;
-        }
+        public HoverOptions Hover { get { return hover; } }
 
-        /// <summary>
-        /// Gets or sets whether the scale should start at zero, or an order of magnitude down from the lowest value.
-        /// </summary>
-        public bool? ScaleBeginAtZero
-        {
-            get;
-            set;
-        }
+        public AnimationOptions Animation { get { return animation; } }
 
-        /// <summary>
-        /// Gets or sets the scale label font declaration for the scale label.
-        /// </summary>
-        public string ScaleFontFamily
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the scale label font size in pixels.
-        /// </summary>
-        public double? ScaleFontSize
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the scale label font weight style.
-        /// </summary>
-        public string ScaleFontStyle
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the scale label font color.
-        /// </summary>
-        public string ScaleFontColor
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets whether or not the chart should be responsive and resize when the browser does.
-        /// </summary>
-        public bool? Responsive
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container.
-        /// </summary>
-        public bool? MaintainAspectRatio
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets whether to draw tooltips on the canvas or not.
-        /// </summary>
-        public bool? ShowTooltips
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets whether to execute the customTooltips function instead of drawing the built in tooltips.
-        /// </summary>
-        public bool? CustomTooltips
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets array of string names to attach tooltip events.
-        /// </summary>
-        public string TooltipEvents
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip background color.
-        /// </summary>
-        public string TooltipFillColor
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip label font declaration for the scale label.
-        /// </summary>
-        public string TooltipFontFamily
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip label font size in pixels.
-        /// </summary>
-        public double? TooltipFontSize
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip font weight style.
-        /// </summary>
-        public string TooltipFontStyle
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip label font colour.
-        /// </summary>
-        public string TooltipFontColor
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip title font declaration for the scale label.
-        /// </summary>
-        public string TooltipTitleFontFamily
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip title font size in pixels.
-        /// </summary>
-        public double? TooltipTitleFontSize
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip title font weight style.
-        /// </summary>
-        public string TooltipTitleFontStyle
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip title font colour.
-        /// </summary>
-        public string TooltipTitleFontColor
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the pixel width of padding around tooltip text.
-        /// </summary>
-        public double? TooltipYPadding
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the pixel width of padding around tooltip text.
-        /// </summary>
-        public double? TooltipXPadding
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the size of the caret on the tooltip.
-        /// </summary>
-        public double? TooltipCaretSize
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the pixel radius of the tooltip border.
-        /// </summary>
-        public double? TooltipCornerRadius
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the tooltip x offset.
-        /// </summary>
-        public double? TooltipXOffset
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the template string for single tooltips.
-        /// </summary>
-        public string TooltipTemplate
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the multi tooltip template.
-        /// </summary>
-        public string MultiTooltipTemplate
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the function that will fire on animation progression..
-        /// </summary>
-        public string OnAnimationProgress
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the function that will fire on animation completion.
-        /// </summary>
-        public string OnAnimationComplete
-        {
-            get; 
-            set;
-        }
+        public ElementsOptions Elements { get { return elements; } }
     }
 }
