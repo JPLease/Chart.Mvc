@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Animation
+﻿namespace Chart.Mvc.Options
 {
     public class AnimationOptions
     {

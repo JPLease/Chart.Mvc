@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Legend
+﻿namespace Chart.Mvc.Options
 {
     public class LegendLabelOptions
     {

@@ -1,9 +1,7 @@
-﻿namespace Chart.Mvc.Legend
+﻿namespace Chart.Mvc.Options
 {
     public class LegendOptions
     {
-        private readonly LegendLabelOptions labels = new LegendLabelOptions();
-
         /// <summary>
         /// Is the legend displayed.
         /// </summary>
@@ -27,6 +25,6 @@
         /// <summary>
         /// See the Legend Label Configuration section below.
         /// </summary>
-        public LegendLabelOptions Labels { get { return labels; } }
+        public LegendLabelOptions Labels { get; set; }
     }
 }

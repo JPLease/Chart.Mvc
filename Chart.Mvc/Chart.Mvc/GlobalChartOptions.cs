@@ -1,9 +1,4 @@
-﻿using Chart.Mvc.Animation;
-using Chart.Mvc.Elements;
-using Chart.Mvc.Hover;
-using Chart.Mvc.Legend;
-using Chart.Mvc.Title;
-using Chart.Mvc.Tooltip;
+﻿using Chart.Mvc.Options;
 
 namespace Chart.Mvc
 {
@@ -12,13 +7,6 @@ namespace Chart.Mvc
     /// </summary>
     public abstract class GlobalChartOptions
     {
-        private readonly TitleOptions title = new TitleOptions();
-        private readonly LegendOptions legend = new LegendOptions();
-        private readonly TooltipOptions tooltip = new TooltipOptions();
-        private readonly HoverOptions hover = new HoverOptions();
-        private readonly AnimationOptions animation = new AnimationOptions();
-        private readonly ElementsOptions elements = new ElementsOptions();
-
         #region Global Font Settings
 
         /// <summary>
@@ -77,16 +65,16 @@ namespace Chart.Mvc
 
         #endregion
         
-        public TitleOptions Title { get { return title; } }
+        public TitleOptions Title { get; set; }
         
-        public LegendOptions Legend { get { return legend; } }
+        public LegendOptions Legend { get; set; }
         
-        public TooltipOptions Tooltip { get { return tooltip; } }
+        public TooltipOptions Tooltip { get; set; }
 
-        public HoverOptions Hover { get { return hover; } }
+        public HoverOptions Hover { get; set; }
 
-        public AnimationOptions Animation { get { return animation; } }
+        public AnimationOptions Animation { get; set; }
 
-        public ElementsOptions Elements { get { return elements; } }
+        public ElementsOptions Elements { get; set; }
     }
 }

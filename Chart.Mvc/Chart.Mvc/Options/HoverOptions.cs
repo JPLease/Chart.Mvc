@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Hover
+﻿namespace Chart.Mvc.Options
 {
     public class HoverOptions
     {

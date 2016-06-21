@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Elements
+﻿namespace Chart.Mvc.Options
 {
     public class ArcOptions
     {

@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Tooltip
+﻿namespace Chart.Mvc.Options
 {
     public class TooltipCallbackOptions
     {

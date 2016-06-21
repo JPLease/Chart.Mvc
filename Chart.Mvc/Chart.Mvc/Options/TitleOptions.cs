@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Title
+﻿namespace Chart.Mvc.Options
 {
     public class TitleOptions
     {
