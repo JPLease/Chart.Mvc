@@ -1,4 +1,5 @@
 ﻿using Chart.Mvc.Options;
+using System.Collections.Generic;
 
 namespace Chart.Mvc
 {
@@ -36,32 +37,56 @@ namespace Chart.Mvc
         /// <summary>
         /// Resizes when the canvas container does.
         /// </summary>
-        public bool? Responsive { get; set; }
+        public bool? Responsive
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Duration in milliseconds it takes to animate to new size after a resize event.
         /// </summary>
-        public double? ResponsiveAnimationDuration { get; set; }
+        public double? ResponsiveAnimationDuration
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Maintain the original canvas aspect ratio (width / height) when resizing.
         /// </summary>
-        public bool? MaintainAspectRatio { get; set; }
+        public bool? MaintainAspectRatio
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Events that the chart should listen to for tooltips and hovering.
         /// </summary>
-        public string[] Events { get; set; }
+        public List<string> Events
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed an array of active elements.
         /// </summary>
-        public string OnClick { get; set; }
+        public string OnClick
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
         /// </summary>
-        public string LegendCallback { get; set; }
+        public string LegendCallback
+        {
+            get;
+            set;
+        }
 
         #endregion
         
