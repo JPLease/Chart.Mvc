@@ -6,7 +6,7 @@ namespace Chart.Mvc
     /// <summary>
     /// The global chart options.
     /// </summary>
-    public abstract class GlobalChartOptions
+    public class GlobalChartOptions
     {
         #region Global Font Settings
 

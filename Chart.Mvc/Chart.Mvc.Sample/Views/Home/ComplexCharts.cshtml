@@ -1,10 +1,15 @@
 ﻿@{
     ViewBag.Title = "Complex Charts";
+    var defaults = new GlobalChartOptions
+    {
+        DefaultFontSize = 11
+    };
 }
 
 <h2>Complex Charts</h2>
 
 <div class="row">
+    @Html.ApplyGlobalDefaults(defaults)
     <div class="col-md-4">
         @Html.Partial("LineChart")
     </div>

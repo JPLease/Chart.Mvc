@@ -62,5 +62,21 @@ namespace Chart.Mvc.Extensions
             tag.InnerHtml = stringBuilder.ToString();
             return new MvcHtmlString(tag.ToString());
         }
+
+        public static MvcHtmlString ApplyGlobalDefaults(this HtmlHelper htmlHelper, GlobalChartOptions defaults)
+        {
+            return ApplyGlobalDefaults(defaults.ToJson());
+        }
+
+        private static MvcHtmlString ApplyGlobalDefaults(string jsonDefaults)
+        {
+            var tag = new TagBuilder("script");
+            tag.Attributes.Add("type", "text/javascript");
+            var stringBuilder = new StringBuilder();
+            stringBuilder.AppendFormat("var defaults = JSON.parse('{0}');", jsonDefaults);
+            stringBuilder.Append("Chart.defaults.global = Chart.helpers.configMerge(Chart.defaults.global, defaults);");
+            tag.InnerHtml = stringBuilder.ToString();
+            return new MvcHtmlString(tag.ToString());
+        }
     }
 }
