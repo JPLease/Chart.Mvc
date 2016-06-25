@@ -143,11 +143,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplexChart\Bar\BarChartDataset.cs" />
+    <Compile Include="ComplexChart\Line\LineChartDataset.cs" />
     <Compile Include="ComplexChart\Options\AxisOptions.cs" />
     <Compile Include="ComplexChart\Options\GridLinesOptions.cs" />
     <Compile Include="ComplexChart\Options\ScaleLabelOptions.cs" />
     <Compile Include="ComplexChart\Options\ScalesOptions.cs" />
+    <Compile Include="ComplexChart\Options\Ticks2Options.cs" />
     <Compile Include="ComplexChart\Options\TicksOptions.cs" />
+    <Compile Include="ComplexChart\Radar\RadarChartDataset.cs" />
     <Compile Include="Options\AnimationOptions.cs" />
     <Compile Include="Options\ArcOptions.cs" />
     <Compile Include="ComplexChart\Bar\BarChart.cs" />

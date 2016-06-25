@@ -3,21 +3,22 @@
     /// <summary>
     /// The complex chart base.
     /// </summary>
-    public abstract class ComplexChartBase<TComplexChartOptions> 
+    public abstract class ComplexChartBase<TComplexChartOptions, TComplexDataset> 
         where TComplexChartOptions : ComplexChartOptions
+        where TComplexDataset : ComplexDataset
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ComplexChartBase"/> class.
         /// </summary>
         protected ComplexChartBase()
         {
-            this.ComplexData = new ComplexData();
+            this.ComplexData = new ComplexData<TComplexDataset>();
         }
 
         /// <summary>
         /// Gets or sets the data.
         /// </summary>
-        public ComplexData ComplexData
+        public ComplexData<TComplexDataset> ComplexData
         {
             get;
             set;

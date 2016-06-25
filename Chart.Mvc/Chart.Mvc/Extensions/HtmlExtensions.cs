@@ -25,7 +25,7 @@ namespace Chart.Mvc.Extensions
         /// <returns>
         /// The <see cref="MvcHtmlString"/>.
         /// </returns>
-        public static MvcHtmlString CreateChart<TComplexChartOptions>(this HtmlHelper htmlHelper, string canvasId, ComplexChartBase<TComplexChartOptions> complexChart) where TComplexChartOptions : ComplexChartOptions
+        public static MvcHtmlString CreateChart<TComplexChartOptions, TComplexDataset>(this HtmlHelper htmlHelper, string canvasId, ComplexChartBase<TComplexChartOptions, TComplexDataset> complexChart) where TComplexChartOptions : ComplexChartOptions where TComplexDataset : ComplexDataset
         {
             return CreateChart(canvasId, complexChart.ChartType.ToString(), complexChart.ComplexData.ToJson(), complexChart.ChartConfiguration.ToJson());
         }

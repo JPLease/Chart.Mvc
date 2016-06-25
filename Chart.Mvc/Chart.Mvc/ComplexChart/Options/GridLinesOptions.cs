@@ -50,6 +50,6 @@
         /// <summary>
         /// If true, offset labels from grid lines.
         /// </summary>
-        public bool OffsetGridLines { get; set; }
+        public bool? OffsetGridLines { get; set; }
     }
 }

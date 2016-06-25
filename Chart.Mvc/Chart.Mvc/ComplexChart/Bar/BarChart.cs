@@ -3,7 +3,7 @@ namespace Chart.Mvc.ComplexChart
     /// <summary>
     /// The bar chart.
     /// </summary>
-    public class BarChart : ComplexChartBase<BarChartOptions>
+    public class BarChart : ComplexChartBase<BarChartOptions, BarChartDataset>
     {
         private readonly BarChartOptions chartOptions = new BarChartOptions();
 

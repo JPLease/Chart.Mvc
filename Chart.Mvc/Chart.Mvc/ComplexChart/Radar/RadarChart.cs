@@ -3,7 +3,7 @@ namespace Chart.Mvc.ComplexChart
     /// <summary>
     /// The radar chart.
     /// </summary>
-    public class RadarChart : ComplexChartBase<RadarChartOptions>
+    public class RadarChart : ComplexChartBase<RadarChartOptions, RadarChartDataset>
     {
         private readonly RadarChartOptions chartOptions = new RadarChartOptions();
 

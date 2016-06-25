@@ -22,33 +22,97 @@ namespace Chart.Mvc.Sample.Models
             }
         }
 
-        public static IEnumerable<ComplexDataset> Datasets
+        public static IEnumerable<LineChartDataset> LineChartDatasets
         {
             get
             {
-                return new List<ComplexDataset>
+                return new List<LineChartDataset>
                            { 
-                               new ComplexDataset
+                               new LineChartDataset
                                    {
                                        Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
                                        Label = "My First dataset",
-                                       FillColor = "rgba(220,220,220,0.2)",
-                                       StrokeColor = "rgba(220,220,220,1)",
-                                       PointColor = "rgba(220,220,220,1)",
-                                       PointStrokeColor = "#fff",
-                                       PointHighlightFill = "#fff",
-                                       PointHighlightStroke = "rgba(220,220,220,1)",
+                                       //FillColor = "rgba(220,220,220,0.2)",
+                                       //StrokeColor = "rgba(220,220,220,1)",
+                                       //PointColor = "rgba(220,220,220,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(220,220,220,1)",
                                    }, 
-                               new ComplexDataset
+                               new LineChartDataset
                                    {
                                        Data = new List<double> { 28, 48, 40, 19, 86, 27, 90 },
                                        Label = "My Second dataset",
-                                       FillColor = "rgba(151,187,205,0.2)",
-                                       StrokeColor = "rgba(151,187,205,1)",
-                                       PointColor = "rgba(151,187,205,1)",
-                                       PointStrokeColor = "#fff",
-                                       PointHighlightFill = "#fff",
-                                       PointHighlightStroke = "rgba(151,187,205,1)",
+                                       //FillColor = "rgba(151,187,205,0.2)",
+                                       //StrokeColor = "rgba(151,187,205,1)",
+                                       //PointColor = "rgba(151,187,205,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(151,187,205,1)",
+                                   }
+                           };
+            }
+        }
+
+        public static IEnumerable<BarChartDataset> BarChartDatasets
+        {
+            get
+            {
+                return new List<BarChartDataset>
+                           {
+                               new BarChartDataset
+                                   {
+                                       Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
+                                       Label = "My First dataset",
+                                       //FillColor = "rgba(220,220,220,0.2)",
+                                       //StrokeColor = "rgba(220,220,220,1)",
+                                       //PointColor = "rgba(220,220,220,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(220,220,220,1)",
+                                   },
+                               new BarChartDataset
+                                   {
+                                       Data = new List<double> { 28, 48, 40, 19, 86, 27, 90 },
+                                       Label = "My Second dataset",
+                                       //FillColor = "rgba(151,187,205,0.2)",
+                                       //StrokeColor = "rgba(151,187,205,1)",
+                                       //PointColor = "rgba(151,187,205,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(151,187,205,1)",
+                                   }
+                           };
+            }
+        }
+
+        public static IEnumerable<RadarChartDataset> RadarChartDatasets
+        {
+            get
+            {
+                return new List<RadarChartDataset>
+                           {
+                               new RadarChartDataset
+                                   {
+                                       Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
+                                       Label = "My First dataset",
+                                       //FillColor = "rgba(220,220,220,0.2)",
+                                       //StrokeColor = "rgba(220,220,220,1)",
+                                       //PointColor = "rgba(220,220,220,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(220,220,220,1)",
+                                   },
+                               new RadarChartDataset
+                                   {
+                                       Data = new List<double> { 28, 48, 40, 19, 86, 27, 90 },
+                                       Label = "My Second dataset",
+                                       //FillColor = "rgba(151,187,205,0.2)",
+                                       //StrokeColor = "rgba(151,187,205,1)",
+                                       //PointColor = "rgba(151,187,205,1)",
+                                       //PointStrokeColor = "#fff",
+                                       //PointHighlightFill = "#fff",
+                                       //PointHighlightStroke = "rgba(151,187,205,1)",
                                    }
                            };
             }

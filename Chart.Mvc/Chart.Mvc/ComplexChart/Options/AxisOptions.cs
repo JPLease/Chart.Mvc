@@ -5,37 +5,65 @@
         /// <summary>
         /// Type of scale being employed. Custom scales can be created and registered with a string key. Options: "category", "linear", "logarithmic", "time", "radialLinear".
         /// </summary>
-        public string Type { get; set; }
+        public string Type
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// If true, show the scale including gridlines, ticks, and labels. Overrides gridLines.display, scaleLabel.display, and ticks.display.
         /// </summary>
-        public bool? Display { get; set; }
+        public bool? Display
+        {
+            get;
+            set;
+        }
 
         /// <summary>
-        /// Id of the axis so that data can bind to it
+        /// Id of the axis so that data can bind to it.
         /// </summary>
-        public string Id { get; set; }
+        public string Id
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// If true, bars are stacked on the x-axis.
         /// </summary>
-        public bool? Stacked { get; set; }
+        public bool? Stacked
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Percent (0-1) of the available width (the space between the gridlines for small datasets) for each data-point to use for the bars.
         /// </summary>
-        public double? CategoryPercentage { get; set; }
+        public double? CategoryPercentage
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Percent (0-1) of the available width each bar should be within the category percentage. 1.0 will take the whole category width and put the bars right next to each other.
         /// </summary>
-        public double? BarPercentage { get; set; }
+        public double? BarPercentage
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Position of the scale. Possible values are 'top', 'left', 'bottom' and 'right'.
         /// </summary>
-        public string Position { get; set; }
+        public string Position
+        {
+            get;
+            set;
+        }
 
         #region Events
 
@@ -111,10 +139,31 @@
 
         #endregion
 
-        public GridLinesOptions GridLines { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public GridLinesOptions GridLines
+        {
+            get;
+            set;
+        }
 
-        public ScaleLabelOptions ScaleLabel { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public ScaleLabelOptions ScaleLabel
+        {
+            get;
+            set;
+        }
 
-        public TicksOptions Ticks { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public TicksOptions Ticks
+        {
+            get;
+            set;
+        }
     }
 }

@@ -7,6 +7,6 @@ namespace Chart.Mvc.ComplexChart
     /// </summary>
     public abstract class ComplexChartOptions : GlobalChartOptions
     {
-        public ScalesOptions Scales { get; set; }
+        
     }
 }

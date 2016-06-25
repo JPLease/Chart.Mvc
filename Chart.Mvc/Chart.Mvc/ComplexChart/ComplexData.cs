@@ -5,7 +5,7 @@ namespace Chart.Mvc.ComplexChart
     /// <summary>
     /// The complex data.
     /// </summary>
-    public class ComplexData
+    public class ComplexData<TComplexDataset> where TComplexDataset : ComplexDataset
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ComplexData"/> class.
@@ -13,7 +13,7 @@ namespace Chart.Mvc.ComplexChart
         public ComplexData()
         {
             this.Labels = new List<string>();
-            this.Datasets = new List<ComplexDataset>();
+            this.Datasets = new List<TComplexDataset>();
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Gets or sets the datasets.
         /// </summary>
-        public List<ComplexDataset> Datasets
+        public List<TComplexDataset> Datasets
         {
             get;
             set;

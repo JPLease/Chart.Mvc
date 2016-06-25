@@ -1,12 +1,19 @@
-﻿namespace Chart.Mvc.ComplexChart
+﻿using Chart.Mvc.ComplexChart.Options;
+
+namespace Chart.Mvc.ComplexChart
 {
     /// <summary>
     /// The bar chart options.
     /// </summary>
     public class BarChartOptions : ComplexChartOptions
     {
-        public string Id { get; set; }
-
-
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public ScalesOptions Scales
+        {
+            get;
+            set;
+        }
     }
 }

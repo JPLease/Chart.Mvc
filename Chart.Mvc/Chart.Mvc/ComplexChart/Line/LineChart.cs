@@ -3,7 +3,7 @@ namespace Chart.Mvc.ComplexChart
     /// <summary>
     /// The line chart.
     /// </summary>
-    public class LineChart : ComplexChartBase<LineChartOptions>
+    public class LineChart : ComplexChartBase<LineChartOptions, LineChartDataset>
     {
         private readonly LineChartOptions chartOptions = new LineChartOptions();
 
