@@ -23,7 +23,34 @@ namespace Chart.Mvc.ComplexChart
             get;
             set;
         }
-        
+
+        /// <summary>
+        /// The fill color under the line.
+        /// </summary>
+        public string BackgroundColor
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Bar border color.
+        /// </summary>
+        public string BorderColor
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Border width of bar in pixels.
+        /// </summary>
+        public double? BorderWidth
+        {
+            get;
+            set;
+        }
+
         /// <summary>
         /// Gets or sets the data.
         /// </summary>

@@ -21,36 +21,9 @@ namespace Chart.Mvc.ComplexChart
             get;
             set;
         }
-
-        /// <summary>
-        /// The fill color under the line.
-        /// </summary>
-        public string BackgroundColor
-        {
-            get;
-            set;
-        }
-
+        
         #region Border
-
-        /// <summary>
-        /// The width of the line in pixels.
-        /// </summary>
-        public double? BorderWidth
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// The color of the line.
-        /// </summary>
-        public string BorderColor
-        {
-            get;
-            set;
-        }
-
+        
         /// <summary>
         /// Cap style of the line.
         /// </summary>
@@ -94,7 +67,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The border color for points.
         /// </summary>
-        public List<string> PointBorderColor
+        public string PointBorderColor
         {
             get;
             set;
@@ -103,7 +76,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The fill color for points.
         /// </summary>
-        public List<string> PointBackgroundColor
+        public string PointBackgroundColor
         {
             get;
             set;
@@ -112,7 +85,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The width of the point border in pixels.
         /// </summary>
-        public List<double> PointBorderWidth
+        public double? PointBorderWidth
         {
             get;
             set;
@@ -121,7 +94,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The radius of the point shape. If set to 0, nothing is rendered.
         /// </summary>
-        public List<double> PointRadius
+        public double? PointRadius
         {
             get;
             set;
@@ -130,7 +103,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The radius of the point when hovered.
         /// </summary>
-        public List<double> PointHoverRadius
+        public double? PointHoverRadius
         {
             get;
             set;
@@ -139,7 +112,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The pixel size of the non-displayed point that reacts to mouse events.
         /// </summary>
-        public List<double> PointHitRadius
+        public double? PointHitRadius
         {
             get;
             set;
@@ -148,7 +121,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
-        public List<string> PointHoverBackgroundColor
+        public string PointHoverBackgroundColor
         {
             get;
             set;
@@ -157,7 +130,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Point border color when hovered.
         /// </summary>
-        public List<string> PointHoverBorderColor
+        public string PointHoverBorderColor
         {
             get;
             set;
@@ -166,7 +139,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Border width of point when hovered.
         /// </summary>
-        public List<double> PointHoverBorderWidth
+        public double? PointHoverBorderWidth
         {
             get;
             set;
@@ -175,7 +148,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// The style of point. Options are 'circle', 'triangle', 'rect', 'rectRot', 'cross', 'crossRot', 'star', 'line', and 'dash'.
         /// </summary>
-        public List<string> PointStyle
+        public string PointStyle
         {
             get;
             set;

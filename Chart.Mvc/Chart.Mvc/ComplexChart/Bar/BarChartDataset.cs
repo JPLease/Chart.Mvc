@@ -21,36 +21,9 @@ namespace Chart.Mvc.ComplexChart
             get;
             set;
         }
-
-        /// <summary>
-        /// The fill color of the bars.
-        /// </summary>
-        public List<string> BackgroundColor
-        {
-            get;
-            set;
-        }
-
+        
         #region Border
-
-        /// <summary>
-        /// Bar border color.
-        /// </summary>
-        public List<string> BorderColor
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Border width of bar in pixels.
-        /// </summary>
-        public List<double> BorderWidth
-        {
-            get;
-            set;
-        }
-
+        
         /// <summary>
         /// Which edge to skip drawing the border for. Options are 'bottom', 'left', 'top', and 'right'.
         /// </summary>
@@ -67,7 +40,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Bar background color when hovered.
         /// </summary>
-        public List<string> HoverBackgroundColor
+        public string HoverBackgroundColor
         {
             get;
             set;
@@ -76,7 +49,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Bar border color when hovered.
         /// </summary>
-        public List<string> HoverBorderColor
+        public string HoverBorderColor
         {
             get;
             set;
@@ -85,7 +58,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// Border width of bar when hovered.
         /// </summary>
-        public List<double> HoverBorderWidth
+        public double? HoverBorderWidth
         {
             get;
             set;
