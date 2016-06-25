@@ -7,7 +7,7 @@ namespace Chart.Mvc.ComplexChart.Options
         /// <summary>
         /// TODO:
         /// </summary>
-        public List<AxisOptions> XAxes
+        public List<ScaleOptions> XAxes
         {
             get;
             set;
@@ -16,7 +16,7 @@ namespace Chart.Mvc.ComplexChart.Options
         /// <summary>
         /// TODO:
         /// </summary>
-        public List<AxisOptions> YAxes
+        public List<ScaleOptions> YAxes
         {
             get;
             set;

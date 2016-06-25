@@ -145,7 +145,7 @@
   <ItemGroup>
     <Compile Include="ComplexChart\Bar\BarChartDataset.cs" />
     <Compile Include="ComplexChart\Line\LineChartDataset.cs" />
-    <Compile Include="ComplexChart\Options\AxisOptions.cs" />
+    <Compile Include="ComplexChart\Options\ScaleOptions.cs" />
     <Compile Include="ComplexChart\Options\GridLinesOptions.cs" />
     <Compile Include="ComplexChart\Options\ScaleLabelOptions.cs" />
     <Compile Include="ComplexChart\Options\ScalesOptions.cs" />
@@ -193,9 +193,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

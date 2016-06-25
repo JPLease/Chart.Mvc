@@ -1,6 +1,6 @@
 ﻿namespace Chart.Mvc.ComplexChart.Options
 {
-    public class AxisOptions
+    public class ScaleOptions
     {
         /// <summary>
         /// Type of scale being employed. Custom scales can be created and registered with a string key. Options: "category", "linear", "logarithmic", "time", "radialLinear".

@@ -10,7 +10,7 @@ namespace Chart.Mvc.ComplexChart
         /// <summary>
         /// TODO:
         /// </summary>
-        public AxisOptions Scale
+        public ScaleOptions Scale
         {
             get;
             set;
