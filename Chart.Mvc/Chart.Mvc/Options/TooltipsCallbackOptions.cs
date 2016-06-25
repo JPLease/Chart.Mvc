@@ -1,6 +1,6 @@
 ﻿namespace Chart.Mvc.Options
 {
-    public class TooltipCallbackOptions
+    public class TooltipsCallbackOptions
     {
         /// <summary>
         /// Text to render before the title.

@@ -1,6 +1,6 @@
 ﻿namespace Chart.Mvc.Options
 {
-    public class TooltipOptions
+    public class TooltipsOptions
     {
         /// <summary>
         /// Are tooltips.
@@ -251,7 +251,7 @@
         /// <summary>
         /// See the callbacks section below.
         /// </summary>
-        public TooltipCallbackOptions Callbacks
+        public TooltipsCallbackOptions Callbacks
         {
             get;
             set;

@@ -35,6 +35,15 @@ namespace Chart.Mvc
         #region Common Chart Configuration
 
         /// <summary>
+        /// TODO:
+        /// </summary>
+        public string DefaultColor
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Resizes when the canvas container does.
         /// </summary>
         public bool? Responsive
@@ -94,7 +103,7 @@ namespace Chart.Mvc
         
         public LegendOptions Legend { get; set; }
         
-        public TooltipOptions Tooltip { get; set; }
+        public TooltipsOptions Tooltips { get; set; }
 
         public HoverOptions Hover { get; set; }
 

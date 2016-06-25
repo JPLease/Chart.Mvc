@@ -1,8 +1,13 @@
-﻿@{
+﻿@using Chart.Mvc.Options
+@{
     ViewBag.Title = "Complex Charts";
     var defaults = new GlobalChartOptions
     {
-        DefaultFontSize = 11
+        DefaultFontSize = 11,
+        Tooltips = new TooltipsOptions 
+        {
+            Enabled = false
+        }
     };
 }
 

@@ -187,8 +187,8 @@
     <Compile Include="SimpleChart\SimpleChartType.cs" />
     <Compile Include="SimpleChart\SimpleData.cs" />
     <Compile Include="Options\TitleOptions.cs" />
-    <Compile Include="Options\TooltipCallbackOptions.cs" />
-    <Compile Include="Options\TooltipOptions.cs" />
+    <Compile Include="Options\TooltipsCallbackOptions.cs" />
+    <Compile Include="Options\TooltipsOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
