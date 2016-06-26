@@ -1,25 +1,24 @@
-﻿using System.Collections.Generic;
-
-namespace Chart.Mvc.SimpleChart
+﻿namespace Chart.Mvc.SimpleChart
 {
     /// <summary>
     /// The simple chart base.
     /// </summary>
-    public abstract class SimpleChartBase<TSimpleChartOptions> 
+    public abstract class SimpleChartBase<TSimpleChartOptions, TSimpleDataset> 
         where TSimpleChartOptions : SimpleChartOptions
+        where TSimpleDataset : SimpleDataset
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleChartBase"/> class.
         /// </summary>
         protected SimpleChartBase()
         {
-            this.Data = new List<SimpleData>();
+            this.SimpleData = new SimpleData<TSimpleDataset>();
         }
 
         /// <summary>
         /// Gets or sets the data.
         /// </summary>
-        public List<SimpleData> Data
+        public SimpleData<TSimpleDataset> SimpleData
         {
             get; 
             set;

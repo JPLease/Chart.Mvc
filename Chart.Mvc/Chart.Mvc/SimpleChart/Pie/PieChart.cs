@@ -3,7 +3,7 @@ namespace Chart.Mvc.SimpleChart
     /// <summary>
     /// The pie chart.
     /// </summary>
-    public class PieChart : SimpleChartBase<PieChartOptions>
+    public class PieChart : SimpleChartBase<PieChartOptions, SimpleDataset>
     {
 
         private readonly PieChartOptions chartOptions = new PieChartOptions();

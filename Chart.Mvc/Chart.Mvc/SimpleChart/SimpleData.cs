@@ -1,43 +1,36 @@
-﻿namespace Chart.Mvc.SimpleChart
+﻿using System.Collections.Generic;
+
+namespace Chart.Mvc.SimpleChart
 {
     /// <summary>
     /// The simple data.
     /// </summary>
-    public class SimpleData
+    public class SimpleData<TSimpleDataset> where TSimpleDataset : SimpleDataset
     {
         /// <summary>
-        /// Gets or sets the value.
+        /// Initializes a new instance of the <see cref="SimpleData"/> class.
         /// </summary>
-        public double Value
+        public SimpleData()
         {
-            get; 
+            this.Labels = new List<string>();
+            this.Datasets = new List<TSimpleDataset>();
+        }
+
+        /// <summary>
+        /// Gets or sets the labels.
+        /// </summary>
+        public List<string> Labels
+        {
+            get;
             set;
         }
 
         /// <summary>
-        /// Gets or sets the color.
+        /// Gets or sets the datasets.
         /// </summary>
-        public string Color
+        public List<TSimpleDataset> Datasets
         {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the highlight.
-        /// </summary>
-        public string Highlight
-        {
-            get; 
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the label.
-        /// </summary>
-        public string Label
-        {
-            get; 
+            get;
             set;
         }
     }

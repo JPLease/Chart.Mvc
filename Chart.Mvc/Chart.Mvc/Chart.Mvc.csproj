@@ -190,6 +190,7 @@
     <Compile Include="Options\TitleOptions.cs" />
     <Compile Include="Options\TooltipsCallbackOptions.cs" />
     <Compile Include="Options\TooltipsOptions.cs" />
+    <Compile Include="SimpleChart\SimpleDataset.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
