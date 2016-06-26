@@ -29,5 +29,11 @@ namespace Chart.Mvc.Extensions
         {
             return JsonConvert.SerializeObject(obj, JsonSerializerSettings);
         }
+
+        public static string ToCamelCaseString<T>(this T obj)
+        {
+            var text = obj.ToString();
+            return text.Substring(0, 1).ToLower() + text.Substring(1);
+        }
     }
 }

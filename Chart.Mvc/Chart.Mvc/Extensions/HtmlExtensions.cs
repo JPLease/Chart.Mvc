@@ -27,7 +27,7 @@ namespace Chart.Mvc.Extensions
         /// </returns>
         public static MvcHtmlString CreateChart<TComplexChartOptions, TComplexDataset>(this HtmlHelper htmlHelper, string canvasId, ComplexChartBase<TComplexChartOptions, TComplexDataset> complexChart) where TComplexChartOptions : ComplexChartOptions where TComplexDataset : ComplexDataset
         {
-            return CreateChart(canvasId, complexChart.ChartType.ToString(), complexChart.ComplexData.ToJson(), complexChart.ChartConfiguration.ToJson());
+            return CreateChart(canvasId, complexChart.ChartType.ToCamelCaseString(), complexChart.ComplexData.ToJson(), complexChart.ChartConfiguration.ToJson());
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace Chart.Mvc.Extensions
         /// <returns>
         /// The <see cref="MvcHtmlString"/>.
         /// </returns>
-        public static MvcHtmlString CreateChart<TSimpleChartOptions>(this HtmlHelper htmlHelper, string canvasId, SimpleChartBase<TSimpleChartOptions> simpleChart) where TSimpleChartOptions : SimpleChartOptions
+        public static MvcHtmlString CreateChart<TSimpleChartOptions, TSimpleDataset>(this HtmlHelper htmlHelper, string canvasId, SimpleChartBase<TSimpleChartOptions, TSimpleDataset> simpleChart) where TSimpleChartOptions : SimpleChartOptions where TSimpleDataset : SimpleDataset
         {
-            return CreateChart(canvasId, simpleChart.ChartType.ToString(), simpleChart.Data.ToJson(), simpleChart.ChartConfiguration.ToJson());
+            return CreateChart(canvasId, simpleChart.ChartType.ToCamelCaseString(), simpleChart.SimpleData.ToJson(), simpleChart.ChartConfiguration.ToJson());
         }
 
         private static MvcHtmlString CreateChart(string canvasId, string chartType, string jsonData, string jsonOptions)
@@ -58,7 +58,7 @@ namespace Chart.Mvc.Extensions
             stringBuilder.AppendFormat("var ctx = document.getElementById(\"{0}\").getContext(\"2d\");", canvasId);
             stringBuilder.AppendFormat("var data = JSON.parse('{0}');", jsonData);
             stringBuilder.AppendFormat("var options = JSON.parse('{0}');", jsonOptions);
-            stringBuilder.AppendFormat("var {0}_chart = new Chart.{1}(ctx, {{data: data, options: options}});", canvasId, chartType);
+            stringBuilder.AppendFormat("var {0}_chart = new Chart(ctx, {{type: '{1}', data: data, options: options}});", canvasId, chartType);
             tag.InnerHtml = stringBuilder.ToString();
             return new MvcHtmlString(tag.ToString());
         }
