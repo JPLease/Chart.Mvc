@@ -152,6 +152,7 @@
     <Compile Include="ComplexChart\Options\Ticks2Options.cs" />
     <Compile Include="ComplexChart\Options\TicksOptions.cs" />
     <Compile Include="ComplexChart\Radar\RadarChartDataset.cs" />
+    <Compile Include="DefaultChartOptions.cs" />
     <Compile Include="Options\AnimationOptions.cs" />
     <Compile Include="Options\ArcOptions.cs" />
     <Compile Include="ComplexChart\Bar\BarChart.cs" />

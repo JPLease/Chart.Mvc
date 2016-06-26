@@ -6,32 +6,8 @@ namespace Chart.Mvc
     /// <summary>
     /// The global chart options.
     /// </summary>
-    public class GlobalChartOptions
+    public abstract class GlobalChartOptions
     {
-        #region Global Font Settings
-
-        /// <summary>
-        /// Default font color for all text.
-        /// </summary>
-        public string DefaultFontColor { get; set; }
-
-        /// <summary>
-        /// Default font family for all text.
-        /// </summary>
-        public string DefaultFontFamily { get; set; }
-
-        /// <summary>
-        /// Default font size (in px) for text. Does not apply to radialLinear scale point labels.
-        /// </summary>
-        public double? DefaultFontSize { get; set; }
-
-        /// <summary>
-        /// Default font style. Does not apply to tooltip title or footer. Does not apply to chart title.
-        /// </summary>
-        public string DefaultFontStyle { get; set; }
-
-        #endregion
-
         #region Common Chart Configuration
 
         /// <summary>
@@ -99,16 +75,58 @@ namespace Chart.Mvc
 
         #endregion
         
-        public TitleOptions Title { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public TitleOptions Title
+        {
+            get;
+            set;
+        }
         
-        public LegendOptions Legend { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public LegendOptions Legend
+        {
+            get;
+            set;
+        }
         
-        public TooltipsOptions Tooltips { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public TooltipsOptions Tooltips
+        {
+            get;
+            set;
+        }
 
-        public HoverOptions Hover { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public HoverOptions Hover
+        {
+            get;
+            set;
+        }
 
-        public AnimationOptions Animation { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public AnimationOptions Animation
+        {
+            get;
+            set;
+        }
 
-        public ElementsOptions Elements { get; set; }
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public ElementsOptions Elements
+        {
+            get;
+            set;
+        }
     }
 }

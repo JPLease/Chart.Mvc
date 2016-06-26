@@ -63,7 +63,7 @@ namespace Chart.Mvc.Extensions
             return new MvcHtmlString(tag.ToString());
         }
 
-        public static MvcHtmlString ApplyGlobalDefaults(this HtmlHelper htmlHelper, GlobalChartOptions defaults)
+        public static MvcHtmlString ApplyGlobalDefaults(this HtmlHelper htmlHelper, DefaultChartOptions defaults)
         {
             return ApplyGlobalDefaults(defaults.ToJson());
         }
