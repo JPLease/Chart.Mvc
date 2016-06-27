@@ -6,11 +6,29 @@
     public class DoughnutChartOptions : SimpleChartOptions
     {
         /// <summary>
-        /// Gets or sets the percentage inner cutout.
+        /// The percentage of the chart that is cut out of the middle.
         /// </summary>
-        public double? PercentageInnerCutout
+        public double? CutoutPercentage
         {
-            get; 
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Starting angle to draw arcs from.
+        /// </summary>
+        public double? Rotation
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Sweep to allow arcs to cover.
+        /// </summary>
+        public double? Circumference
+        {
+            get;
             set;
         }
     }

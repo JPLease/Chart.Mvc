@@ -1,6 +1,4 @@
-﻿using Chart.Mvc.ComplexChart.Options;
-
-namespace Chart.Mvc.ComplexChart
+﻿namespace Chart.Mvc.ComplexChart
 {
     /// <summary>
     /// The complex chart options.

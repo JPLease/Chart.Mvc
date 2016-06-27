@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.ComplexChart.Options
+﻿namespace Chart.Mvc.Options
 {
     public class GridLinesOptions
     {

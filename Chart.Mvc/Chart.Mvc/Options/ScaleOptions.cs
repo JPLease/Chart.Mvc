@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.ComplexChart.Options
+﻿namespace Chart.Mvc.Options
 {
     public class ScaleOptions
     {
@@ -60,6 +60,15 @@
         /// Position of the scale. Possible values are 'top', 'left', 'bottom' and 'right'.
         /// </summary>
         public string Position
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// TODO: refactor
+        /// </summary>
+        public bool? LineArc
         {
             get;
             set;

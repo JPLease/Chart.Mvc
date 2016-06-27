@@ -37,5 +37,21 @@
             get;
             set;
         }
+
+        /// <summary>
+        /// TODO: refactor
+        /// </summary>
+        public bool? AnimateRotate
+        {
+            get;
+            set;
+        }
+
+        //TODO: refactor
+        public bool? AnimateScale
+        {
+            get;
+            set;
+        }
     }
 }

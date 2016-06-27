@@ -1,4 +1,4 @@
-﻿using Chart.Mvc.ComplexChart.Options;
+﻿using Chart.Mvc.Options;
 
 namespace Chart.Mvc.ComplexChart
 {
