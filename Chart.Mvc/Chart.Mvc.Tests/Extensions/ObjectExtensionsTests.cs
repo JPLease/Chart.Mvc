@@ -1,6 +1,6 @@
-﻿using System;
-using Chart.Mvc.Extensions;
+﻿using Chart.Mvc.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Chart.Mvc.Tests.Extensions
 {

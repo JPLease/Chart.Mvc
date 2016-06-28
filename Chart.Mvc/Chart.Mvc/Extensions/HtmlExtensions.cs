@@ -1,7 +1,7 @@
-﻿using System.Text;
-using System.Web.Mvc;
-using Chart.Mvc.ComplexChart;
+﻿using Chart.Mvc.ComplexChart;
 using Chart.Mvc.SimpleChart;
+using System.Text;
+using System.Web.Mvc;
 
 namespace Chart.Mvc.Extensions
 {

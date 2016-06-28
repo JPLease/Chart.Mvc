@@ -56,7 +56,7 @@ namespace Chart.Mvc.SimpleChart
             set;
         }
 
-        #endregion
+        #endregion Border
 
         #region Hover
 
@@ -78,6 +78,6 @@ namespace Chart.Mvc.SimpleChart
             set;
         }
 
-        #endregion
+        #endregion Hover
     }
 }
