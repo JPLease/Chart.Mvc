@@ -21,9 +21,9 @@ namespace Chart.Mvc.ComplexChart
             get;
             set;
         }
-        
+
         #region Border
-        
+
         /// <summary>
         /// Which edge to skip drawing the border for. Options are 'bottom', 'left', 'top', and 'right'.
         /// </summary>
@@ -33,7 +33,7 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
-        #endregion
+        #endregion Border
 
         #region Hover
 
@@ -64,6 +64,6 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
-        #endregion
+        #endregion Hover
     }
 }

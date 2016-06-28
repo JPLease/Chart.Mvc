@@ -146,7 +146,7 @@
         /// </summary>
         public string AfterUpdate { get; set; }
 
-        #endregion
+        #endregion Events
 
         /// <summary>
         /// TODO:

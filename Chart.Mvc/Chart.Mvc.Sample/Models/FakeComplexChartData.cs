@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Chart.Mvc.ComplexChart;
+﻿using Chart.Mvc.ComplexChart;
+using System.Collections.Generic;
 
 namespace Chart.Mvc.Sample.Models
 {
@@ -11,12 +11,12 @@ namespace Chart.Mvc.Sample.Models
             {
                 return new[]
                            {
-                               "January", 
-                               "February", 
-                               "March", 
-                               "April", 
-                               "May", 
-                               "June", 
+                               "January",
+                               "February",
+                               "March",
+                               "April",
+                               "May",
+                               "June",
                                "July"
                            };
             }
@@ -27,7 +27,7 @@ namespace Chart.Mvc.Sample.Models
             get
             {
                 return new List<LineChartDataset>
-                           { 
+                           {
                                new LineChartDataset
                                    {
                                        Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
@@ -38,7 +38,7 @@ namespace Chart.Mvc.Sample.Models
                                        PointBorderColor = "#fff",
                                        PointHoverBackgroundColor = "#fff",
                                        PointHoverBorderColor = "rgba(220,220,220,1)"
-                                   }, 
+                                   },
                                new LineChartDataset
                                    {
                                        Data = new List<double> { 28, 48, 40, 19, 86, 27, 90 },

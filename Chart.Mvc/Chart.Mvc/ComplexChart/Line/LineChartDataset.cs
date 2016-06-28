@@ -39,9 +39,9 @@ namespace Chart.Mvc.ComplexChart
             get;
             set;
         }
-        
+
         #region Border
-        
+
         /// <summary>
         /// Cap style of the line.
         /// </summary>
@@ -78,8 +78,8 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
-        #endregion
-        
+        #endregion Border
+
         #region Points
 
         /// <summary>
@@ -172,6 +172,6 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
-        #endregion
+        #endregion Points
     }
 }

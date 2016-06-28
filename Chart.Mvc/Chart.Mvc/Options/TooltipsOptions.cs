@@ -94,7 +94,7 @@
             set;
         }
 
-        #endregion
+        #endregion Title
 
         #region Body
 
@@ -143,7 +143,7 @@
             set;
         }
 
-        #endregion
+        #endregion Body
 
         #region Footer
 
@@ -201,7 +201,7 @@
             set;
         }
 
-        #endregion
+        #endregion Footer
 
         /// <summary>
         /// Padding to add on left and right of tooltip.

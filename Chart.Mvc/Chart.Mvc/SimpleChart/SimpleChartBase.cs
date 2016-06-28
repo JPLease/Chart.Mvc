@@ -3,7 +3,7 @@
     /// <summary>
     /// The simple chart base.
     /// </summary>
-    public abstract class SimpleChartBase<TSimpleChartOptions, TSimpleDataset> 
+    public abstract class SimpleChartBase<TSimpleChartOptions, TSimpleDataset>
         where TSimpleChartOptions : SimpleChartOptions
         where TSimpleDataset : SimpleDataset
     {
@@ -20,7 +20,7 @@
         /// </summary>
         public SimpleData<TSimpleDataset> SimpleData
         {
-            get; 
+            get;
             set;
         }
 

@@ -1,4 +1,4 @@
-﻿using Chart.Mvc.Options;
+﻿using Chart.Mvc.Options.Scale;
 
 namespace Chart.Mvc.SimpleChart
 {

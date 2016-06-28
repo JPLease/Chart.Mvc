@@ -10,7 +10,7 @@
         /// </summary>
         public double? CutoutPercentage
         {
-            get; 
+            get;
             set;
         }
 

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Chart.Mvc.SimpleChart;
+﻿using Chart.Mvc.SimpleChart;
+using System.Collections.Generic;
 
 namespace Chart.Mvc.Sample.Models
 {

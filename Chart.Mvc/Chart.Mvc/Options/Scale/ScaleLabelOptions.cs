@@ -3,7 +3,7 @@
     public class ScaleLabelOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool? Display
         {

@@ -3,7 +3,7 @@
     /// <summary>
     /// The complex chart base.
     /// </summary>
-    public abstract class ComplexChartBase<TComplexChartOptions, TComplexDataset> 
+    public abstract class ComplexChartBase<TComplexChartOptions, TComplexDataset>
         where TComplexChartOptions : ComplexChartOptions
         where TComplexDataset : ComplexDataset
     {

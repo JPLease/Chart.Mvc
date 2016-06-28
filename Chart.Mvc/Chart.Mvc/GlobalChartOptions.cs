@@ -1,4 +1,5 @@
 ﻿using Chart.Mvc.Options;
+using Chart.Mvc.Options.Elements;
 using System.Collections.Generic;
 
 namespace Chart.Mvc
@@ -73,8 +74,8 @@ namespace Chart.Mvc
             set;
         }
 
-        #endregion
-        
+        #endregion Common Chart Configuration
+
         /// <summary>
         /// TODO:
         /// </summary>
@@ -83,7 +84,7 @@ namespace Chart.Mvc
             get;
             set;
         }
-        
+
         /// <summary>
         /// TODO:
         /// </summary>
@@ -92,7 +93,7 @@ namespace Chart.Mvc
             get;
             set;
         }
-        
+
         /// <summary>
         /// TODO:
         /// </summary>
