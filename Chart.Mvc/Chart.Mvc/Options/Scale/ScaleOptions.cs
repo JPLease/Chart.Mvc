@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options
+﻿namespace Chart.Mvc.Options.Scale
 {
     public class ScaleOptions
     {

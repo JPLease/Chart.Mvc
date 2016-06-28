@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options
+﻿namespace Chart.Mvc.Options.Elements
 {
     public class ElementsOptions
     {
@@ -23,7 +23,8 @@
         /// <summary>
         /// Point elements are used to represent the points in a line chart or a bubble chart.
         /// </summary>
-        public PointOptions Point {
+        public PointOptions Point
+        {
             get;
             set;
         }

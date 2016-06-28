@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Chart.Mvc.Options
+namespace Chart.Mvc.Options.Elements
 {
     public class LineOptions
     {

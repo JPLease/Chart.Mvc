@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options
+﻿namespace Chart.Mvc.Options.Elements
 {
     public class RectangleOptions
     {
