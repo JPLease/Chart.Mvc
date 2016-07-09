@@ -1,4 +1,5 @@
 ﻿using Chart.Mvc.Options;
+using Chart.Mvc.Options.Elements;
 using System.Collections.Generic;
 
 namespace Chart.Mvc

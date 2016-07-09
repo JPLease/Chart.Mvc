@@ -34,7 +34,7 @@ namespace Chart.Mvc.SimpleChart
         }
 
         /// <summary>
-        /// TODO:
+        /// The fill color under the line.
         /// </summary>
         public List<string> BackgroundColor
         {
@@ -44,12 +44,18 @@ namespace Chart.Mvc.SimpleChart
 
         #region Border
 
+        /// <summary>
+        /// Point border color.
+        /// </summary>
         public List<string> BorderColor
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Border width of point in pixels.
+        /// </summary>
         public List<double> BorderWidth
         {
             get;
@@ -60,18 +66,27 @@ namespace Chart.Mvc.SimpleChart
 
         #region Hover
 
+        /// <summary>
+        /// Point background color when hovered.
+        /// </summary>
         public List<string> HoverBackgroundColor
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Point border color when hovered.
+        /// </summary>
         public List<string> HoverBorderColor
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Point width of bar when hovered.
+        /// </summary>
         public List<double> HoverBorderWidth
         {
             get;
