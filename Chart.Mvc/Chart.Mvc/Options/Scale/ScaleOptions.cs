@@ -1,14 +1,13 @@
 ﻿namespace Chart.Mvc.Options.Scale
 {
-    public class ScaleOptions
+    public abstract class ScaleOptions
     {
         /// <summary>
         /// Type of scale being employed. Custom scales can be created and registered with a string key. Options: "category", "linear", "logarithmic", "time", "radialLinear".
         /// </summary>
-        public string Type
+        public abstract string Type
         {
             get;
-            set;
         }
 
         /// <summary>
@@ -165,11 +164,14 @@
             get;
             set;
         }
+    }
 
+    public abstract class ScaleOptions<TTicksOptions> : ScaleOptions where TTicksOptions : TicksOptions
+    {
         /// <summary>
         /// TODO:
         /// </summary>
-        public TicksOptions Ticks
+        public TTicksOptions Ticks
         {
             get;
             set;

@@ -1,6 +1,6 @@
-﻿namespace Chart.Mvc.Options
+﻿namespace Chart.Mvc.Options.Scale
 {
-    public class Ticks2Options
+    public class Ticks2Options : TicksOptions
     {
         /// <summary>
         /// If true, scale will inclulde 0 if it is not already included.

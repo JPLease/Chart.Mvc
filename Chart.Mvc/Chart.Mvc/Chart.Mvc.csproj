@@ -145,6 +145,10 @@
   <ItemGroup>
     <Compile Include="ComplexChart\Bar\BarChartDataset.cs" />
     <Compile Include="ComplexChart\Line\LineChartDataset.cs" />
+    <Compile Include="Options\Scale\CategoryScaleOptions.cs" />
+    <Compile Include="Options\Scale\LinearScaleOptions.cs" />
+    <Compile Include="Options\Scale\LogarithmicScaleOptions.cs" />
+    <Compile Include="Options\Scale\RadialLinearScaleOptions.cs" />
     <Compile Include="Options\Scale\ScaleOptions.cs" />
     <Compile Include="Options\Scale\GridLinesOptions.cs" />
     <Compile Include="Options\Scale\ScaleLabelOptions.cs" />
@@ -175,6 +179,7 @@
     <Compile Include="Options\LegendOptions.cs" />
     <Compile Include="Options\Elements\LineOptions.cs" />
     <Compile Include="Options\Elements\PointOptions.cs" />
+    <Compile Include="Options\Scale\TimeScaleOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Options\Elements\RectangleOptions.cs" />
     <Compile Include="SimpleChart\Doughnut\DoughnutChart.cs" />

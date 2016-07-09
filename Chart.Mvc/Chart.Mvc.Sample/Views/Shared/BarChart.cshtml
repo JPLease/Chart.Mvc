@@ -11,15 +11,16 @@
     };
     complexChart.ChartConfiguration.Scales = new ScalesOptions
     {
-        XAxes = new List<ScaleOptions>
+        YAxes = new List<ScaleOptions>
         {
-            new ScaleOptions
+            new LogarithmicScaleOptions
             {
-                Stacked = true
+                //Type = "logarithmic"
+                //Stacked = true
             }
         }
     };
-    
+
 }
 <h3>@Canvas</h3>
 <canvas id="@Canvas" width="400" height="400"></canvas>

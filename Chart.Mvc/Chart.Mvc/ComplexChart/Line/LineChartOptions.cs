@@ -1,5 +1,4 @@
-﻿using Chart.Mvc.Options;
-using Chart.Mvc.Options.Scale;
+﻿using Chart.Mvc.Options.Scale;
 
 namespace Chart.Mvc.ComplexChart
 {
@@ -18,7 +17,7 @@ namespace Chart.Mvc.ComplexChart
         }
 
         /// <summary>
-        /// TODO:
+        /// Use this to style the ticks, labels, and grid lines.
         /// </summary>
         public ScalesOptions Scales
         {
