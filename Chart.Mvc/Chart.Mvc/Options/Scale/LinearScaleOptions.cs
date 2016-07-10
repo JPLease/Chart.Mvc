@@ -1,6 +1,9 @@
 ﻿namespace Chart.Mvc.Options.Scale
 {
-    public class LinearScaleOptions : ScaleOptions<TicksOptions>
+    /// <summary>
+    /// The linear scale is used to chart numerical data. It can be placed on either the x or y axis.
+    /// </summary>
+    public class LinearScaleOptions : ScaleOptions<LinearTicksOptions, GridLinesOptions>
     {
         public override string Type
         {
