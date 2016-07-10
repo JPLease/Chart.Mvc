@@ -1,9 +1,9 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.RadialLinear
 {
     /// <summary>
     /// The following options are used to configure the point labels that are shown on the perimeter of the scale. Note that these options only apply if lineArc is false.
     /// </summary>
-    public class PointLabels
+    public class PointLabelsOptions
     {
         /// <summary>
         /// Callback function to transform data label to axis label.

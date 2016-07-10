@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.Time
 {
     /// <summary>
     /// The time scale is used to display times and dates. It can only be placed on the X axis.

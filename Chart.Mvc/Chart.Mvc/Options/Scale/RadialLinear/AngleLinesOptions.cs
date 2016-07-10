@@ -1,9 +1,9 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.RadialLinear
 {
     /// <summary>
     /// The following options are used to configure angled lines that radiate from the center of the chart to the point labels.
     /// </summary>
-    public class AngleLines
+    public class AngleLinesOptions
     {
         /// <summary>
         /// If true, angle lines are shown..

@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.Category
 {
     public class CategoryTicksOptions : TicksOptions
     {

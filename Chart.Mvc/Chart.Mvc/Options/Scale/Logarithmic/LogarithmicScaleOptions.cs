@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.Logarithmic
 {
     /// <summary>
     /// The logarithmic scale is used to chart numerical data. It can be placed on either the x or y axis.

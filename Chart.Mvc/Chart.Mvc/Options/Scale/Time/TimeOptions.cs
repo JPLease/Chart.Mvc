@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.Time
 {
     public class TimeOptions
     {
@@ -77,7 +77,7 @@
         /// <summary>
         /// TODO:
         /// </summary>
-        public DisplayFormats DisplayFormats
+        public DisplayFormatsOptions DisplayFormats
         {
             get;
             set;

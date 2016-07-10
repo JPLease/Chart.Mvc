@@ -1,4 +1,4 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.RadialLinear
 {
     /// <summary>
     /// The radial linear scale is used specifically for the radar and polar are chart types. It overlays the chart area, rather than being positioned on one of the edges.
@@ -25,7 +25,7 @@
         /// <summary>
         /// The following options are used to configure angled lines that radiate from the center of the chart to the point labels.
         /// </summary>
-        public AngleLines AngleLines
+        public AngleLinesOptions AngleLines
         {
             get;
             set;
@@ -34,7 +34,7 @@
         /// <summary>
         /// The following options are used to configure the point labels that are shown on the perimeter of the scale. Note that these options only apply if lineArc is false.
         /// </summary>
-        public PointLabels PointLabels
+        public PointLabelsOptions PointLabels
         {
             get;
             set;

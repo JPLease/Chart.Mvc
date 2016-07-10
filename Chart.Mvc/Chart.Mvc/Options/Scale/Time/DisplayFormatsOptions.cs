@@ -1,9 +1,9 @@
-﻿namespace Chart.Mvc.Options.Scale
+﻿namespace Chart.Mvc.Options.Scale.Time
 {
     /// <summary>
     /// These formats are used to configure how different time units are formed into strings for the axis tick marks.
     /// </summary>
-    public class DisplayFormats
+    public class DisplayFormatsOptions
     {
         public string Millisecond
         {
