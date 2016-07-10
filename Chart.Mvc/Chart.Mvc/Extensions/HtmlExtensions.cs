@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Chart.Mvc.ComplexChart;
 using Chart.Mvc.SimpleChart;
+using Chart.Mvc.Options.Scale;
 
 namespace Chart.Mvc.Extensions
 {
@@ -75,6 +76,22 @@ namespace Chart.Mvc.Extensions
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendFormat("var defaults = JSON.parse('{0}');", jsonDefaults);
             stringBuilder.Append("Chart.defaults.global = Chart.helpers.configMerge(Chart.defaults.global, defaults);");
+            tag.InnerHtml = stringBuilder.ToString();
+            return new MvcHtmlString(tag.ToString());
+        }
+
+        public static MvcHtmlString UpdateScaleDefaults(this HtmlHelper htmlHelper, ScaleOptions scaleOptions)
+        {
+            return UpdateScaleDefaults(scaleOptions.Type, scaleOptions.ToJson());
+        }
+
+        private static MvcHtmlString UpdateScaleDefaults(string type, string jsonOptions)
+        {
+            var tag = new TagBuilder("script");
+            tag.Attributes.Add("type", "text/javascript");
+            var stringBuilder = new StringBuilder();
+            stringBuilder.AppendFormat("var scaleOptions = JSON.parse('{0}');", jsonOptions);
+            stringBuilder.AppendFormat("Chart.scaleService.updateScaleDefaults('{0}', scaleOptions);", type);
             tag.InnerHtml = stringBuilder.ToString();
             return new MvcHtmlString(tag.ToString());
         }
