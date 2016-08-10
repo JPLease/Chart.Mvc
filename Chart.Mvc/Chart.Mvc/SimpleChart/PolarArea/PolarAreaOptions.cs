@@ -8,7 +8,7 @@ namespace Chart.Mvc.SimpleChart
     public class PolarAreaOptions : SimpleChartOptions
     {
         /// <summary>
-        /// TODO:
+        /// Use this to style the ticks, labels, and grid lines.
         /// </summary>
         public ScaleOptions Scale
         {

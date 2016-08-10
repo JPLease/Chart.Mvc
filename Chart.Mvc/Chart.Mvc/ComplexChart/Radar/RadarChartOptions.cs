@@ -8,7 +8,7 @@ namespace Chart.Mvc.ComplexChart
     public class RadarChartOptions : ComplexChartOptions
     {
         /// <summary>
-        /// TODO:
+        /// Use this to style the ticks, labels, and grid lines.
         /// </summary>
         public ScaleOptions Scale
         {

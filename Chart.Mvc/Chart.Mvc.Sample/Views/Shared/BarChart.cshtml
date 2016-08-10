@@ -1,4 +1,6 @@
 ﻿@using Chart.Mvc.Options
+@using Chart.Mvc.Options.Scale
+@using Chart.Mvc.Options.Scale.Logarithmic
 @{
     const string Canvas = "BarChart";
     var complexChart = new BarChart();
@@ -8,6 +10,14 @@
     {
         Enabled = true
     };
+    complexChart.ChartConfiguration.Scales = new ScalesOptions
+    {
+        YAxes = new List<ScaleOptions>
+        {
+            new LogarithmicScaleOptions()
+        }
+    };
+
 }
 <h3>@Canvas</h3>
 <canvas id="@Canvas" width="400" height="400"></canvas>

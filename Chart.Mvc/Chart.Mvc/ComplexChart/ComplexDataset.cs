@@ -25,6 +25,15 @@ namespace Chart.Mvc.ComplexChart
         }
 
         /// <summary>
+        /// Gets or sets the data.
+        /// </summary>
+        public List<double> Data
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// The fill color under the line.
         /// </summary>
         public string BackgroundColor
@@ -33,6 +42,8 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
+        #region Border
+        
         /// <summary>
         /// Bar border color.
         /// </summary>
@@ -51,13 +62,6 @@ namespace Chart.Mvc.ComplexChart
             set;
         }
 
-        /// <summary>
-        /// Gets or sets the data.
-        /// </summary>
-        public List<double> Data
-        {
-            get;
-            set;
-        }
+        #endregion
     }
 }
